@@ -1,0 +1,12 @@
+#   Refer for explanation to following link:
+#   https://github.com/evilmartians/lefthook/blob/master/docs/configuration.md
+
+ pre-push:
+   commands:
+     test:
+       run: ./node_modules/.bin/turbo run test --affected
+
+ pre-commit:
+   commands:
+     lint:
+       run: ./node_modules/.bin/biome check . --changed --no-errors-on-unmatched

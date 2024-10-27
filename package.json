@@ -1,0 +1,46 @@
+{
+  "name": "@npl/source",
+  "version": "0.0.1",
+  "private": false,
+  "description": "Node Package Local, devtool to publish and consume npm packages locally and seamlessly.",
+  "author": "Joan Lloret <https://github.com/juallom>",
+  "repository": {
+    "url": "",
+    "type": "git"
+  },
+  "keywords": [
+    "node",
+    "npm",
+    "pnpm",
+    "devtool",
+    "verdaccio",
+    "turbo",
+    "react",
+    "tauri",
+    "rust",
+    "multiplatform"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "test": "turbo test",
+    "lint": "biome check .",
+    "lint:fix": "biome check . --write",
+    "postinstall": "lefthook install"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "lefthook": "^1.8.1",
+    "turbo": "^2.2.3",
+    "typescript": "^5.4.5"
+  },
+  "packageManager": "pnpm@8.15.6",
+  "engines": {
+    "node": ">=20.18"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}

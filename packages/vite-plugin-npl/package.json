@@ -1,0 +1,40 @@
+{
+  "name": "@npl/vite-plugin-npl",
+  "version": "1.0.0",
+  "type": "module",
+  "module": "dist/index.js",
+  "main": "dist/index.cjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "echo \"No tests\"",
+    "ipc": "concurrently \"node ipc/server.js\" \"node ipc/client.js\""
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.8.1",
+    "concurrently": "^9.0.1",
+    "tsup": "^8.3.5",
+    "vite": "^5.4.10"
+  },
+  "peerDependencies": {
+    "vite": "^5.4.10"
+  },
+  "dependencies": {
+    "@types/node-ipc": "^9.2.3",
+    "execa": "^9.4.1",
+    "glob": "^11.0.0",
+    "node-ipc": "^12.0.0",
+    "tar": "^7.4.3"
+  }
+}
