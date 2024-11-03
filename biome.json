@@ -8,7 +8,7 @@
   },
   "files": {
     "ignoreUnknown": true,
-    "ignore": ["apps/system"]
+    "ignore": ["package.json"]
   },
   "formatter": {
     "enabled": true,

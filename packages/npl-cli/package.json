@@ -1,0 +1,44 @@
+{
+  "name": "@zazlab/npl-cli",
+  "description": "Node Package Local. CLI to manage packages locally for seamlessly development experience.",
+  "author": "Joan Lloret [https://github.com/juallom]",
+  "license": "MIT",
+  "version": "0.0.1-beta.7",
+  "type": "module",
+  "bin": {
+    "npl": "./dist/npl.js"
+  },
+  "exports": {
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "package.json"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "echo 'No tests for this package.'",
+    "publish-local": "npm run build; npm version prerelease --preid=beta; npm publish --registry http://0.0.0.0:4873/ --tag beta"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^22.8.6",
+    "@types/yargs": "^17.0.33",
+    "tsup": "^8.3.5",
+    "vitest": "^2.1.4"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^7.0.1",
+    "execa": "^9.5.1",
+    "find-up": "^7.0.0",
+    "fs-extra": "^11.2.0",
+    "lowdb": "^7.0.1",
+    "node-emoji": "^2.1.3",
+    "tar": "^7.4.3",
+    "yargs": "^17.7.2"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}

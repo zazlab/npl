@@ -127,17 +127,17 @@ export const VitePluginNpl = (opts: VitePluginNplOptions): Plugin[] => {
   }
 
   if (type === 'application') {
-    ipc.serve(() => {
-      for (const localDep of localDeps) {
-        ipc.server.on('message', async (data, socket) => {
-          console.log('Received message:', data);
-          await execa('echo', [`"${JSON.stringify(data, null, 2)}"`, '>', 'data.json']);
-          ipc.server.emit(socket, `${PLUGIN_NAME}:${localDep}:ok`, true);
-        });
-      }
-    });
-
-    ipc.server.start();
+    // ipc.serve(() => {
+    //   for (const localDep of localDeps) {
+    //     ipc.server.on('message', async (data, socket) => {
+    //       console.log('Received message:', data);
+    //       await execa('echo', [`"${JSON.stringify(data, null, 2)}"`, '>', 'data.json']);
+    //       ipc.server.emit(socket, `${PLUGIN_NAME}:${localDep}:ok`, true);
+    //     });
+    //   }
+    // });
+    //
+    // ipc.server.start();
 
     plugins.push({
       name: `${PLUGIN_NAME}-application:serve`,

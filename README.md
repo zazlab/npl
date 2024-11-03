@@ -2,7 +2,7 @@
 
 ## Install
 ```shell
-pnpm install
+npm install
 ```
 
 ## Develop

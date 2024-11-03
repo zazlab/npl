@@ -1,0 +1,27 @@
+storage: /verdaccio/storage/data
+plugins: /verdaccio/plugins
+
+web:
+  title: NPL Registry
+
+auth:
+  htpasswd:
+    file: /verdaccio/conf/htpasswd
+    max_users: 3
+
+uplinks:
+  npmjs:
+    url: https://registry.npmjs.org/
+
+packages:
+  '@zazlab/*':
+    access: $all
+    publish: $authenticated
+    unpublish: $authenticated
+  '**':
+    access: $all
+    publish: $authenticated
+    unpublish: $authenticated
+    proxy: npmjs
+
+log: { type: stdout, format: pretty, level: http }

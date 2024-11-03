@@ -1,4 +1,5 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
     "target": "ESNext",
     "lib": ["ESNext"],
@@ -9,12 +10,18 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "types": ["node"],
+    "types": ["node", "yargs", "fs-extra"],
     "strict": true,
+    "esModuleInterop": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "outDir": "dist"
+    "rootDir": ".",
+    "outDir": "dist",
+    "baseUrl": "./src",
+    "paths": {
+      "#/*": ["*"]
+    }
   },
-  "include": ["src"]
+  "include": ["src", "tsup.config.ts"]
 }
