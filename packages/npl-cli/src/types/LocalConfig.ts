@@ -5,4 +5,5 @@ export type LocalConfig = {
     [key in NplScriptKey]?: string;
   };
   links: Record<string, string>;
+  watchFiles: string[];
 };

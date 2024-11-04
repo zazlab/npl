@@ -3,7 +3,7 @@
   "description": "Node Package Local. CLI to manage packages locally for seamlessly development experience.",
   "author": "Joan Lloret [https://github.com/juallom]",
   "license": "MIT",
-  "version": "0.0.1-beta.7",
+  "version": "0.0.1-beta.21",
   "type": "module",
   "bin": {
     "npl": "./dist/npl.js"
@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "@inquirer/prompts": "^7.0.1",
+    "chokidar": "^4.0.1",
     "execa": "^9.5.1",
     "find-up": "^7.0.0",
     "fs-extra": "^11.2.0",

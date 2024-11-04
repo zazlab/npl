@@ -41,7 +41,4 @@ yarn-error.log*
 
 .npl
 
-verdaccio/storage
-verdaccio/conf/htpasswd
-
 demo

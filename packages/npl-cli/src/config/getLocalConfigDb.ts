@@ -10,6 +10,7 @@ export const getLocalConfigDb = async (location: string) => {
   const config = await JSONFilePreset<LocalConfig>(location, {
     links: {},
     scripts: {},
+    watchFiles: ['src', 'package.json'],
   });
   logger.debug('Found local config DB.', colors.yellow(JSON.stringify(config.data)));
   await config.write();
